@@ -5,7 +5,10 @@
 	<views>50,51,52,53,54,55,500,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<include>DefaultBackground</include>
+		<control type="group">
+			<include>DefaultBackground</include>
+			<visible>!Control.IsVisible(500)</visible>
+		</control>
 		<include>CommonScrollbars</include>
 		<control type="group" id="100">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
@@ -15,6 +18,7 @@
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
 			<include>View_55_WideList</include>
+
 			<include>View_500_SmallThumb</include>
 			<include>View_501_Banner</include>
 		</control>
@@ -259,10 +263,13 @@
 				<include>MediaMenuNowPlaying</include>
 			</control>
 		</control>
-		<include name="TopBar">
-			<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
-			<param name="breadcrumbs_icon" value="icons/settings/video.png" />
-		</include>
-		<include>BottomBar</include>
+		<control type="group">
+			<include name="TopBar">
+				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
+				<param name="breadcrumbs_icon" value="icons/settings/video.png" />
+			</include>
+			<include>BottomBar</include>
+			<visible>!Control.IsVisible(500)</visible>
+		</control>
 	</controls>
 </window>
