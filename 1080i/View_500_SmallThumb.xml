@@ -38,7 +38,8 @@
 						<height>180</height>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[ListPosterVar]</texture>
 						<aspectratio>keep</aspectratio>
-						<bordertexture colordiffuse="border_alpha">colors/white.png</bordertexture>
+						<bordertexture colordiffuse="button_focus">colors/white.png</bordertexture>
+
 						<bordersize>4</bordersize>
 					</control>
 				</focusedlayout>
